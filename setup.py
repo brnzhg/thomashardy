@@ -12,3 +12,9 @@ setup(
         testing=testing:cli
     ''',
 )
+
+# pyspellchecker
+# pydictionary
+# sqlalchemy
+
+# - Click

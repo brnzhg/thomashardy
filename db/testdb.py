@@ -43,7 +43,7 @@ class UserQuizHistory(Base):
     quiz_dt = Column(DateTime, primary_key=True)
     hit_or_miss = Column(Boolean)
 
-    user_vocab_word = relationship('UserVocabWord', backpopulates='user_quiz_history')
+    user_vocab_word = relationship('UserVocabWord', back_populates='user_quiz_history')
 
 
 class UserVocabWord(Base):
@@ -56,7 +56,7 @@ class UserVocabWord(Base):
 
     user = relationship('User')
     vocab_word = relationship('VocabWord')
-    user_quiz_history = relationship('UserQuizHistory', backpopulates='user_vocab_word')
+    user_quiz_history = relationship('UserQuizHistory', back_populates='user_vocab_word')
 
 
 class Synonym(Base):
